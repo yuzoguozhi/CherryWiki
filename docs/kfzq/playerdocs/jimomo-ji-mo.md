@@ -3,7 +3,7 @@ icon: sparkle
 description: 寂陌 / 陌陌
 ---
 
-# Ji\_momo / 寂陌
+# Ji_momo / 寂陌
 
 <figure><img src="https://webstatic-zijgame-1258074638.cos.ap-shanghai.myqcloud.com/img/wiki/player_img_ji_momo.png" alt=""><figcaption></figcaption></figure>
 
