@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "CherryWiki",
   description: "A VitePress Site",
+  base: '/CherryWiki/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     //导航栏
