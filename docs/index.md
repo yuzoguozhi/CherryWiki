@@ -19,7 +19,7 @@ features:
     details: 使用Vitepress构建文档，只需编辑Markdown文件即可撰写记忆。
   - title: 可协作
     details: 使用Github进行协作，相对的简化共创流程。
-  - title: 不知
-    details: 不知
+  - title: 记忆的种子…
+    details: 由于目前未完工，只能使用顶部搜索找到词条（如搜索Pockyqiqi）
 ---
 
