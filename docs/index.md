@@ -21,5 +21,8 @@ features:
     details: 使用Github进行协作，相对的简化共创流程。
   - title: 记忆的种子…
     details: 由于目前未完工，只能使用顶部搜索找到词条（如搜索Pockyqiqi）
+  - title: 编撰更改
+    details: 仓库中文件编辑位置由./story/变更为./docs/
+    
 ---
 
