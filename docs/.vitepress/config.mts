@@ -9,7 +9,6 @@ export default defineConfig({
   search: {
   provider: 'local',
     },
-    
     // https://vitepress.dev/reference/default-theme-config
     //导航栏
     nav: [
@@ -28,25 +27,10 @@ export default defineConfig({
       }
     ],
 
-    docFooter: {
-      prev: "上一篇", //Next page
-      next: "下一篇", //Previous page
-       
-    },
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
     ],
-    
-      // 部分功能文本汉化
-
-    langMenuLabel: '多语言',
-    returnToTopLabel: '回到顶部',
-    sidebarMenuLabel: '菜单',
-    darkModeSwitchLabel: '主题',
-    lightModeSwitchTitle: '切换到浅色模式',
-    darkModeSwitchTitle: '切换到深色模式',
-    skipToContentLabel: '跳转到内容',
+ 
 
       
   }
