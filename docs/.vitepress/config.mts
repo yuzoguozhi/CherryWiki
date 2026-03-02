@@ -1,4 +1,8 @@
 import { defineConfig } from 'vitepress'
+import { generateSidebar } from 'vitepress-sidebar'; // VitePress Sidebar 自动生成侧边栏插件
+const vitepressSidebarOptions = {
+  /* Options... */
+};
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -7,6 +11,7 @@ export default defineConfig({
   base: '/CherryWiki/',
   //lastUpdated: true, 此配置不会立即生效，需git提交后爬取时间戳，没有安装git本地报错可以先注释
   themeConfig: {
+  logo: '/cherrywiki_icon.svg',
   editLink: {
      pattern: 'https://github.com/yuzoguozhi/CherryWiki/edit/main/docs/:path',
      text: '前往 GitHub 编辑此页面',
@@ -22,65 +27,51 @@ export default defineConfig({
        { text: '示例', link: '/markdown-examples' }
      ],
 
-  // 导航栏（test）
-  //  nav: [
-  //    { text: '首页', link: '/' },
-  //    {
-  //      text: '🍉指南',
-  //      items: [
-  //        {
-  //          // 分组标题1
-  //          text: '介绍',
-  //          items: [
-  //            { text: '前言', link: '/preface' },
-  //          ],
-  //        },
-  //        {
-  //          // 分组标题2
-  //          text: '基础设置',
-  //          items: [
-  //            { text: '快速上手', link: '/getting-started' },
-  //            { text: '配置', link: '/configuration' },
-  //            { text: '页面', link: '/page' },
-  //            { text: 'Frontmatter', link: '/frontmatter' },
-  //          ],
-  //        },
-  //        {
-  //          // 分组标题3
-  //          text: '进阶玩法',
-  //          items: [
-  //            { text: 'Markdown', link: '/markdown' },
-  //            { text: '团队', link: '/team' },
-  //            { text: '多语言', link: '/multi-language' },
-  //            { text: 'DocSearch', link: '/docsearch' },
-  //            { text: '静态部署', link: '/assets' },
-  //            { text: '样式美化', link: '/style' },
-  //            { text: '组件', link: '/components' },
-  //            { text: '布局插槽', link: '/layout' },
-  //            { text: '插件', link: '/plugin' },
-  //            { text: '更新及卸载', link: '/update' },
-  //            { text: '搭建导航', link: '/nav/' },
-  //            { text: '永久链接', link: '/permalink/' },
-  //          ],
-  //        },
-  //      ],
-  //    },
-  //
-  //    { text: '更新日志', link: '/changelog' },
-  //  ],
-
-
-    sidebar: [
-      {
-        text: '开服列传',
-        items: [
-          { text: '测试', link: '/kfzq/playerdocs/flyme' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-        
-      }
-    ],
-
+    sidebar: generateSidebar({
+      /*
+       * For detailed instructions, see the links below:
+       * https://vitepress-sidebar.jooy2.com/guide/api
+       */
+      documentRootPath: '/docs', //文档根目录
+      // scanStartPath: null,
+      // resolvePath: null,
+      useTitleFromFileHeading: true, //显示带有 .md 文件中 h1 标题内容的标题。
+      useTitleFromFrontmatter: true,
+      // frontmatterTitleFieldName: 'title',
+      useFolderTitleFromIndexFile: true, //是否使用层级首页文件名做分级标题，侧边栏目录名根据 index.md h1标题显示需启用
+      useFolderLinkFromIndexFile: true, //是否链接至层级首页文件(如点击可导航至docs/kfzq的index.md)，侧边栏目录名根据 index.md h1标题显示需启用
+      // hyphenToSpace: true,
+      // underscoreToSpace: true,
+      // capitalizeFirst: false,
+      // capitalizeEachWords: false,
+      collapsed: true, //折叠组关闭
+      collapseDepth: 2, //折叠组2级菜单
+      // sortMenusByName: false,
+      // sortMenusByFrontmatterOrder: false,
+      // sortMenusByFrontmatterDate: false,
+      // sortMenusOrderByDescending: false,
+      // sortMenusOrderNumericallyFromTitle: false,
+      // sortMenusOrderNumericallyFromLink: false,
+      // frontmatterOrderDefaultValue: 0,
+      // manualSortFileNameByPriority: ['first.md', 'second', 'third.md'], //手动排序，文件夹不用带后缀
+      removePrefixAfterOrdering: false, //删除前缀，必须与prefixSeparator一起使用
+      prefixSeparator: '.', //删除前缀的符号
+      // excludeFiles: ['first.md', 'secret.md'],
+      // excludeFilesByFrontmatterFieldName: 'exclude',
+      // excludeFolders: ['secret-folder'],
+      // includeDotFiles: false,
+      // includeRootIndexFile: false,
+      // includeFolderIndexFile: false, //是否包含层级主页
+      // includeEmptyFolder: false,
+      // rootGroupText: 'Contents',
+      // rootGroupLink: 'https://github.com/jooy2',
+      // rootGroupCollapsed: false,
+      // convertSameNameSubFileToGroupIndexPage: false,
+      // folderLinkNotIncludesFileName: false,
+      // keepMarkdownSyntaxFromTitle: false,
+      // debugPrint: false,
+    }),
+  
     docFooter: {
       prev: "上一篇", //Next page
       next: "下一篇", //Previous page
@@ -92,8 +83,7 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/yuzoguozhi/CherryWiki' },
     ],
     
-      // 部分功能文本汉化
-
+  // 部分功能文本汉化
     langMenuLabel: '多语言',
     returnToTopLabel: '回到顶部',
     sidebarMenuLabel: '菜单',
