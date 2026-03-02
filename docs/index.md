@@ -8,8 +8,8 @@ hero:
   tagline: 展示世间「记忆」的地方。
   actions:
     - theme: brand
-      text: Markdown 示例
-      link: /markdown-examples
+      text: 开服专区词条
+      link: /kfzq
     - theme: alt
       text: API 示例
       link: /api-examples
