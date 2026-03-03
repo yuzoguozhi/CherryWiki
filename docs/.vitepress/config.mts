@@ -4,11 +4,15 @@ const vitepressSidebarOptions = {
   /* Options... */
 };
 
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "CherryWiki",
-  description: "A VitePress Site",
+  description: "樱桃Wiki，存放世界某处的一缕「记忆」。",
   base: '/CherryWiki/',
+  head: [
+    ['link',{ rel: 'icon', href: '/CherryWiki/cherrywiki_icon.png'}], //fav图标，路径要与base:相同
+   ],
   //lastUpdated: true, 此配置不会立即生效，需git提交后爬取时间戳，没有安装git本地报错可以先注释
   themeConfig: {
   logo: '/cherrywiki_icon.svg',

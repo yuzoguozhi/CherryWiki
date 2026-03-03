@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "CherryWiki"
   text: "樱桃Wiki"
-  tagline: 展示世间「记忆」的地方。
+  tagline: 存放世界某处的一缕「记忆」。
   actions:
     - theme: brand
       text: 开服专区词条
