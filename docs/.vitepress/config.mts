@@ -9,7 +9,7 @@ const vitepressSidebarOptions = {
 export default defineConfig({
   title: "CherryWiki",
   description: "樱桃Wiki，存放世界某处的一缕「记忆」。",
-  //base: '/CherryWiki/',
+  //base: '/CherryWiki/', //GitHub自定义域名时需要注释或删除这段，反之亦然。 
   head: [
     ['link',{ rel: 'icon', href: '/cherrywiki_icon.png'}], //fav图标，路径要与base:相同
    ],
@@ -37,8 +37,8 @@ export default defineConfig({
           text: '其他站点',
           items: [
             { text: '❌ CherryBlock官网', link: 'https://cherryblock.zijgame.top' },
-            { text: '❌ 开服专区官网', link: 'https://kfzq.zijgame.top' },
-            { text: '❌ Zijgame官网', link: 'https://www.zijgame.top' },
+            { text: '开服专区官网', link: 'https://kfzq.zijgame.top' },
+            { text: 'Zijgame官网', link: 'https://www.zijgame.top' },
             { text: '开服专区官网镜像站', link: 'https://kfzq-1258074638.cos-website.ap-shanghai.myqcloud.com' }
           ]
         },
