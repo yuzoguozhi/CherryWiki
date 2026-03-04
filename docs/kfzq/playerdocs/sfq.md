@@ -1,5 +1,4 @@
-<img width="1758" height="867" alt="image" src="https://github.com/user-attachments/assets/d8c46bae-88dd-4663-a3d1-8ca94565e6bb" />---
-description: 随风去
+
 ---
 
 # sfq
