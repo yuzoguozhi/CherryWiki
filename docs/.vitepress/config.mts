@@ -29,6 +29,7 @@ export default defineConfig({
   nav: [
     { text: '首页', link: '/' },
     { text: '📘开服专区', link: '/kfzq' },
+    { text: '📘3366美食群🍒', link: '/meishiqun' },
     {
       text: '更多',
       items: [
